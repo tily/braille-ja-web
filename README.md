@@ -1,4 +1,4 @@
 braille-ja-web
 ==============
 
-braille-jaのちょっとしたデモサイト
+[braille-ja](https://github.com/tadd/braille-ja) のちょっとしたデモサイト

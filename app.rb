@@ -1,4 +1,5 @@
 require 'sinatra'
+require "sinatra/reloader" if development?
 require 'json'
 require 'braille-ja'
 
@@ -8,4 +9,8 @@ get '/translate' do
   error 400, {error: 'text required'}.to_json if text.nil?
   error 400, {error: 'text too long'}.to_json if text.length > 100
   {translated: text.kana_to_braille}.to_json
+end
+
+get '/' do
+  erb :index
 end

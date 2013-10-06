@@ -6,6 +6,7 @@ lib/bundler/man
 rdoc
 spec/reports
 tmp
+vendor/
 
 # YARD artifacts
 .yardoc

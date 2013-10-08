@@ -15,17 +15,17 @@
 <body>
   <div class="container">
     <h1><a href="https://github.com/tadd/braille-ja">braille-ja</a>のちょっとしたデモ (未動作)</h1>
-    <form role="form">
+    <form role="form" action="#">
       <div class="form-group">
 	<div class="text-center">
 	  <p>
-	    <textarea id="original" class="form-control" rows="1"></textarea>
+	    <input type="text" id="original" class="form-control"></textarea>
 	  </p>
 	  <p>
-	    <a href="#" class="text-center btn btn-primary btn-lg">⇓</a>
+	    <button type="submit" id="translate" class="text-center btn btn-primary btn-lg">⇓</button>
 	  </p>
 	  <p>
-	    <textarea id="translated" class="form-control" rows="1" readonly="readonly"></textarea>
+	    <input type="text" id="translated" class="form-control" readonly="readonly"></textarea>
 	  </p>
 	</div>
       </div>

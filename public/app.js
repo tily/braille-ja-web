@@ -5,3 +5,7 @@ $("#translate").click(function(ev) {
 	$("#translated").val(obj["translated"]);
     });
 });
+
+$("#input-example").click(function(ev) {
+    $("#original").val("あいうえお")
+});

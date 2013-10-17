@@ -9,7 +9,8 @@ get '/translate' do
   error 400, {error: 'text required'}.to_json if text.nil?
   error 400, {error: 'text too long'}.to_json if text.length > 100
 
-  headers "Access-Control-Allow-Origin" => "tadd.github.io tadd.github.com"
+  headers "Access-Control-Allow-Origin" =>
+    %w[http https].product(%w[io com]).map{|schema, tld| "#{schema}://tadd.github.#{tld}"}.join(' ')
   {translated: text.kana_to_braille}.to_json
 end
 

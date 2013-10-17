@@ -9,7 +9,7 @@ get '/translate' do
   error 400, {error: 'text required'}.to_json if text.nil?
   error 400, {error: 'text too long'}.to_json if text.length > 100
 
-  headers "Access-Control-Allow-Origin" => '*'
+  headers "Access-Control-Allow-Origin" => 'http://tadd.github.io'
   {translated: text.kana_to_braille}.to_json
 end
 

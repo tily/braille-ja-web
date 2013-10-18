@@ -3,6 +3,7 @@ require "sinatra/reloader" if development?
 require 'json'
 require 'braille-ja'
 require 'digest'
+require 'dalli'
 
 def setup_cache(seed)
   cache_control :public, max_age: 3600

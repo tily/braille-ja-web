@@ -7,6 +7,11 @@ require 'digest'
 def setup_cache(seed)
   cache_control :public, max_age: 3600
   etag Digest::SHA1.hexdigest(seed)
+  if memcachier_servers = ENV["MEMCACHIER_SERVERS"]
+    set :cache, Dalli::Client.new(memcachier_servers,
+                                  username: ENV["MEMCACHIER_USERNAME"],
+                                  password: ENV["MEMCACHIER_PASSWORD"])
+  end
 end
 
 get '/translate' do

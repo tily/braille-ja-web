@@ -8,6 +8,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.3.5)
+    dalli (2.6.4)
     diff-lcs (1.2.4)
     kgio (2.8.1)
     multi_json (1.8.2)
@@ -47,6 +48,7 @@ PLATFORMS
 
 DEPENDENCIES
   braille-ja!
+  dalli
   rack-test
   rspec
   sinatra

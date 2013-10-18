@@ -13,6 +13,8 @@ get '/translate' do
   {translated: text.kana_to_braille}.to_json
 end
 
+DEMO_SITE = 'http://tadd.github.io/braille-ja'
+
 get '/' do
-  erb :index
+  redirect DEMO_SITE
 end

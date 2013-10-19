@@ -28,7 +28,7 @@ get '/translate' do
 
   headers "Access-Control-Allow-Origin" => 'http://tadd.github.io'
   setup_cache(text)
-  {translated: text.kana_to_braille}.to_json
+  {translated: text.to_braille}.to_json
 end
 
 DEMO_SITE = 'http://tadd.github.io/braille-ja'

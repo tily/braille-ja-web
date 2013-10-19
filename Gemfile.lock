@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/tadd/braille-ja.git
-  revision: 80a13f19b1f87e1b0b3aef2b8d7e8bfb86bf4825
+  revision: 1188bbdf219fa6982b2eb6d3ea6ebf6c29d736bc
   specs:
     braille-ja (0.0.0)
 

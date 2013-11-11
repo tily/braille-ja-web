@@ -33,5 +33,11 @@ describe 'Braille-ja Web' do
       expect(last_response).to be_client_error
       expect(JSON.parse(last_response.body)['error']).to match /required/
     end
+
+    it 'pings' do
+      get '/ping'
+      expect(last_response).to be_ok
+      expect(last_response.body).to eq 'pong'
+    end
   end
 end

@@ -31,6 +31,10 @@ get '/translate' do
   {translated: text.to_braille}.to_json
 end
 
+get '/ping' do
+  'pong'
+end
+
 DEMO_SITE = 'http://tadd.github.io/braille-ja'
 
 get '/' do

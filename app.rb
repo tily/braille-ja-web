@@ -32,6 +32,8 @@ get '/translate' do
 end
 
 get '/ping' do
+  content_type :txt
+  headers "Access-Control-Allow-Origin" => 'http://tadd.github.io'
   'pong'
 end
 

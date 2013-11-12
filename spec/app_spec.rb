@@ -18,6 +18,7 @@ describe 'Braille-ja Web' do
     it "translates" do
       get '/translate', text: 'あ'
       expect(last_response).to be_ok
+      expect(last_response.content_type).to match %r|application/json|
       expect(JSON.parse(last_response.body)['translated']).to eq '⠁'
     end
 
@@ -38,6 +39,7 @@ describe 'Braille-ja Web' do
       get '/ping'
       expect(last_response).to be_ok
       expect(last_response.body).to eq 'pong'
+      expect(last_response.content_type).to match %r|text/plain|
     end
   end
 end
